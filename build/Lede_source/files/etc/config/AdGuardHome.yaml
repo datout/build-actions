@@ -193,6 +193,12 @@ user_rules:
 - '@@||v.gdt.qq.com^$important'
 - '@@||v2.gdt.qq.com^$important'
 - '@@||adsmind.ugdtimg.com^$important'
+- '@@||activity.e.kuaishou.com^$important'
+- '@@||push.kwd.inkuai.com^$important'
+- '@@||ali.static.yximgs.com^$important'
+- '@@||push.ksapisrv.com^$important'
+- '@@||oth.eve.mdt.qq.com^$important'
+- '@@||wxsnsdy.wxs.qq.com^$important'
 - ""
 dhcp:
   enabled: false
