@@ -199,6 +199,15 @@ user_rules:
 - '@@||push.ksapisrv.com^$important'
 - '@@||oth.eve.mdt.qq.com^$important'
 - '@@||wxsnsdy.wxs.qq.com^$important'
+- '@@||dataflow.biliapi.com^$important'
+- '@@||data.bilibili.com^$important'
+- '@@||mo.m.taobao.com^$important'
+- '@@||mars.jd.com^$important'
+- '@@||api2.e.kuaishou.com^$important'
+- '@@||cm.bilibili.com^$important'
+- '@@||metrics1.data.hicloud.com^$important'
+- '@@||s3.ssl.qhres2.com^$important'
+- '@@||s4.ssl.qhres2.com^$important'
 - ""
 dhcp:
   enabled: false
