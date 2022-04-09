@@ -83,7 +83,7 @@ tls:
   private_key_path: ""
 filters:
 - enabled: true
-  url: https://banbendalao.coding.net/p/adgk/d/ADgk/git/raw/master/ADgk.txt
+  url: https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt
   name: adgk手机去广告规则
   id: 139789121
 - enabled: true
