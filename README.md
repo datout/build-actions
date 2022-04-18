@@ -1,4 +1,4 @@
-
+- cd openwrt && make menuconfig
 - ## [`github编译教程`](https://github.com/danshui-git/shuoming#readme)
 
 ---
