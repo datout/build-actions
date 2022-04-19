@@ -91,12 +91,12 @@ tls:
   certificate_path: ""
   private_key_path: ""
 filters:
-- enabled: true
-  url: https://banbendalao.coding.net/p/adgk/d/ADgk/git/raw/master/ADgk.txt
+- enabled: false
+  url: https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt
   name: adgk手机去广告规则
   id: 139789121
 - enabled: true
-  url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-easylist.txt
+  url: https://anti-ad.net/easylist.txt
   name: anti-AD命中率最高列表
   id: 139789122
 - enabled: true
