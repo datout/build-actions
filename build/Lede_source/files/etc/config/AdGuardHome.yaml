@@ -35,7 +35,6 @@ dns:
   - 180.168.255.18
   - tls://dns.google
   - tcp://8.8.4.4
-  - '[/raw.githubusercontent.com/]tcp://208.67.220.220:5353'
   upstream_dns_file: ""
   bootstrap_dns:
   - 119.29.29.29
@@ -219,12 +218,15 @@ user_rules:
 - '@@||mo.m.taobao.com^$important'
 - '@@||mars.jd.com^$important'
 - '@@||api2.e.kuaishou.com^$important'
-- '#@@||cm.bilibili.com^$important'
 - '@@||metrics1.data.hicloud.com^$important'
 - '@@||s3.ssl.qhres2.com^$important'
 - '@@||s4.ssl.qhres2.com^$important'
 - '@@||s5.ssl.qhres2.com^$important'
 - '@@||s0.ssl.qhres2.com^$important'
+- '@@||s1.ssl.qhres2.com^$important'
+- '@@||frontend-perf-service.e.kuaishou.com^$important'
+- '@@||o1098464.ingest.sentry.io^$important'
+- '@@||adtrack.e.kuaishou.com^$important'
 - ""
 dhcp:
   enabled: false
