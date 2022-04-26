@@ -99,7 +99,7 @@ filters:
   url: https://anti-ad.net/easylist.txt
   name: anti-AD命中率最高列表
   id: 139789122
-- enabled: true
+- enabled: false
   url: https://gitee.com/halflife/list/raw/master/ad.txt
   name: halflife合并乘风
   id: 139789131
