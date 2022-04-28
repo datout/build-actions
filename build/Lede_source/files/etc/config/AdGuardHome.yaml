@@ -33,8 +33,10 @@ dns:
   upstream_dns:
   - 116.228.111.118
   - 180.168.255.18
-  - tls://dns.google
-  - tcp://8.8.4.4
+  - https://1.1.1.1/dns-query
+  - https://dns.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  - https://dns.google/dns-query
   upstream_dns_file: ""
   bootstrap_dns:
   - 119.29.29.29
