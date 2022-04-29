@@ -34,8 +34,8 @@ dns:
   - 116.228.111.118
   - 180.168.255.18
   - 8.8.8.8
+  - '[/raw.githubusercontent.com/]tcp://208.67.220.220:5353'
   - https://1.1.1.1/dns-query
-  - https://dns.pub/dns-query
   - https://dns.alidns.com/dns-query
   - https://dns.google/dns-query
   upstream_dns_file: ""
