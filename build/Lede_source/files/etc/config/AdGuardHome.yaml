@@ -223,6 +223,7 @@ user_rules:
 - '@@||api2.e.kuaishou.com^$important'
 - '@@||metrics1.data.hicloud.com^$important'
 - '@@||s3.ssl.qhres2.com^$important'
+- '@@||s2.ssl.qhres2.com^$important'
 - '@@||s4.ssl.qhres2.com^$important'
 - '@@||s5.ssl.qhres2.com^$important'
 - '@@||s0.ssl.qhres2.com^$important'
