@@ -1,4 +1,4 @@
-
+- 输入命令：cd openwrt && make menuconfig
 <details>
 <summary>🆙点击查看更新说明</summary>
 <br>
