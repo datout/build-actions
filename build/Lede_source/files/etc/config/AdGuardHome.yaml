@@ -231,6 +231,7 @@ user_rules:
 - '@@||frontend-perf-service.e.kuaishou.com^$important'
 - '@@||o1098464.ingest.sentry.io^$important'
 - '@@||adtrack.e.kuaishou.com^$important'
+- '@@||act.vip.iqiyi.com^$important'
 - ""
 dhcp:
   enabled: false
