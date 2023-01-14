@@ -232,6 +232,11 @@ user_rules:
 - '@@||o1098464.ingest.sentry.io^$important'
 - '@@||adtrack.e.kuaishou.com^$important'
 - '@@||act.vip.iqiyi.com^$important'
+- '@@||onething.qiyukf.com^$important'
+- '@@||hd.browser.miui.com^$important'
+- '@@||v1-mllqv.onewsvod.com^$important'
+- '@@||mb.yidianzixun.com^$important'
+- '@@||blackhole.m.jd.com^$important'
 - ""
 dhcp:
   enabled: false
