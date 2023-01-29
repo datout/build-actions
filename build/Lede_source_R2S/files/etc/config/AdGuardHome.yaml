@@ -8,7 +8,6 @@ auth_attempts: 5
 block_auth_min: 15
 http_proxy: ""
 language: zh-cn
-rlimit_nofile: 0
 debug_pprof: false
 web_session_ttl: 720
 dns:
@@ -18,7 +17,7 @@ dns:
   statistics_interval: 7
   querylog_enabled: true
   querylog_file_enabled: true
-  querylog_interval: 1
+  querylog_interval: 168h
   querylog_size_memory: 1000
   anonymize_client_ip: false
   protection_enabled: true
@@ -32,11 +31,13 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   upstream_dns:
-  - 210.22.70.225
-  - 210.22.70.3
-  - tls://dns.google
-  - tcp://8.8.4.4
+  - 116.228.111.118
+  - 180.168.255.18
+  - 8.8.8.8
   - '[/raw.githubusercontent.com/]tcp://208.67.220.220:5353'
+  - https://1.1.1.1/dns-query
+  - https://dns.alidns.com/dns-query
+  - https://dns.google/dns-query
   upstream_dns_file: ""
   bootstrap_dns:
   - 119.29.29.29
@@ -46,15 +47,20 @@ dns:
   - 2620:fe::fe:10
   all_servers: true
   fastest_addr: false
+  fastest_timeout: 1s
   allowed_clients: []
   disallowed_clients: []
   blocked_hosts:
   - version.bind
   - id.server
   - hostname.bind
+  trusted_proxies:
+  - 127.0.0.0/8
+  - ::1/128
   cache_size: 4194304
   cache_ttl_min: 60
   cache_ttl_max: 86400
+  cache_optimistic: false
   bogus_nxdomain: []
   aaaa_disabled: true
   enable_dnssec: true
@@ -72,8 +78,10 @@ dns:
   cache_time: 30
   rewrites: []
   blocked_services: []
+  upstream_timeout: 10s
   local_domain_name: lan
   resolve_clients: true
+  use_private_ptr_resolvers: true
   local_ptr_upstreams: []
 tls:
   enabled: false
@@ -104,17 +112,9 @@ filters:
   name: halflife合并乘风
   id: 139789131
 - enabled: false
-  url: https://easylist.to/easylist/easyprivacy.txt
-  name: EasyPrivacy隐私相关
-  id: 139789132
-- enabled: false
   url: https://www.i-dont-care-about-cookies.eu/abp/
   name: I don't care about cookies隐私相关
   id: 139789133
-- enabled: false
-  url: https://gitee.com/cjx82630/cjxlist/raw/master/cjx-ublock.txt
-  name: CJX's uBlock list隐私相关
-  id: 139789141
 - enabled: false
   url: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds-Ultra.txt
   name: GoodbyeAds 大全去广告
@@ -128,10 +128,6 @@ filters:
   name: 1024host
   id: 139789151
 - enabled: false
-  url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
-  name: Peter Lowe’s Ad and tracking server list​
-  id: 139789152
-- enabled: false
   url: https://easylist.to/easylist/fanboy-social.txt
   name: Fanboy's Social Blocking List
   id: 139789153
@@ -139,18 +135,6 @@ filters:
   url: https://easylist.to/easylist/fanboy-annoyance.txt
   name: Fanboy's Annoyance List
   id: 139789154
-- enabled: false
-  url: https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
-  name: EasyList Cookie List
-  id: 139789155
-- enabled: false
-  url: https://fanboy.co.nz/fanboy-antifacebook.txt
-  name: Anti-Facebook List
-  id: 139789161
-- enabled: false
-  url: https://filters.adtidy.org/extension/ublock/filters/14.txt
-  name: AdGuard Annoyances filter
-  id: 139789162
 - enabled: false
   url: https://www.malwaredomainlist.com/hostslist/hosts.txt
   name: MalwareDomainList.com Hosts List
@@ -160,25 +144,9 @@ filters:
   name: Fanboy's Enhanced Tracking List
   id: 139789164
 - enabled: false
-  url: https://filters.adtidy.org/extension/ublock/filters/3.txt
-  name: AdGuard Tracking Protection filter
-  id: 139789165
-- enabled: true
   url: https://easylist.to/easylist/easylist.txt
   name: EasyList
   id: 139789171
-- enabled: false
-  url: https://filters.adtidy.org/extension/ublock/filters/11.txt
-  name: AdGuard Mobile Ads filter
-  id: 139789172
-- enabled: false
-  url: https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt
-  name: AdGuard Base filter
-  id: 139789173
-- enabled: false
-  url: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-  name: Adblock Warning Removal List
-  id: 139789174
 - enabled: false
   url: https://fanboy.co.nz/fanboy-problematic-sites.txt
   name: Fanboy's problematic-sites
@@ -192,17 +160,17 @@ filters:
   name: Adbyby Lazy Rule
   id: 139789182
 - enabled: false
-  url: https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt
-  name: hosts
-  id: 139789183
-- enabled: false
-  url: https://gitlab.com/xuhaiyang1234/AAK-Cont/raw/master/FINAL_BUILD/aak-cont-list-notubo.txt
-  name: aak-cont-list-notubo
-  id: 139789184
-- enabled: true
   url: https://fanboy.co.nz/r/fanboy-ultimate.txt
-  name: fan
-  id: 1608372401
+  name: fanboy
+  id: 1609312482
+- enabled: true
+  url: https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt
+  name: mv
+  id: 1609312483
+- enabled: false
+  url: https://gitee.com/xinggsf/Adblock-Rule/raw/master/rule.txt
+  name: rule
+  id: 1609312484
 whitelist_filters: []
 user_rules:
 - '# @@||taobao.com^$important'
@@ -255,6 +223,7 @@ user_rules:
 - '@@||api2.e.kuaishou.com^$important'
 - '@@||metrics1.data.hicloud.com^$important'
 - '@@||s3.ssl.qhres2.com^$important'
+- '@@||s2.ssl.qhres2.com^$important'
 - '@@||s4.ssl.qhres2.com^$important'
 - '@@||s5.ssl.qhres2.com^$important'
 - '@@||s0.ssl.qhres2.com^$important'
@@ -262,6 +231,12 @@ user_rules:
 - '@@||frontend-perf-service.e.kuaishou.com^$important'
 - '@@||o1098464.ingest.sentry.io^$important'
 - '@@||adtrack.e.kuaishou.com^$important'
+- '@@||act.vip.iqiyi.com^$important'
+- '@@||onething.qiyukf.com^$important'
+- '@@||hd.browser.miui.com^$important'
+- '@@||v1-mllqv.onewsvod.com^$important'
+- '@@||mb.yidianzixun.com^$important'
+- '@@||blackhole.m.jd.com^$important'
 - ""
 dhcp:
   enabled: false
@@ -287,4 +262,8 @@ log_max_size: 100
 log_max_age: 3
 log_file: ""
 verbose: false
-schema_version: 10
+os:
+  group: ""
+  user: ""
+  rlimit_nofile: 0
+schema_version: 12
