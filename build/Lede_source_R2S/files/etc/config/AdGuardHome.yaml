@@ -31,9 +31,10 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   upstream_dns:
-  - 116.228.111.118
-  - 180.168.255.18
-  - 8.8.8.8
+  - 210.22.70.225
+  - 210.22.70.3
+  - tls://dns.google
+  - tcp://8.8.4.4
   - '[/raw.githubusercontent.com/]tcp://208.67.220.220:5353'
   - https://1.1.1.1/dns-query
   - https://dns.alidns.com/dns-query
