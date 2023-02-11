@@ -1,7 +1,5 @@
 -2023年2月6号
 
-- cd openwrt && make menuconfig
-
 新版编译仓库：https://github.com/281677160/autobuild
 
 老版编译仓库：https://github.com/281677160/build-actions
