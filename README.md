@@ -1,3 +1,5 @@
+- cd openwrt && make menuconfig
+
 -2023年2月6号
 
 新版编译仓库：https://github.com/281677160/autobuild
