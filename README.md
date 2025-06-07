@@ -1,3 +1,4 @@
+- cd openwrt && make menuconfig
 
 <details>
 <summary>⬆️更新说明（2025年5月30号）</summary>
