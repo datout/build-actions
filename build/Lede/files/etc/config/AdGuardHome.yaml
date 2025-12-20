@@ -23,8 +23,10 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   upstream_dns:
-    - 202.96.209.133
-    - 202.96.209.5
+    - 210.22.70.225
+    - 210.22.70.3
+    - '#202.96.209.133'
+    - '#202.96.209.5'
     - '#116.228.111.118'
     - '#180.168.255.18'
     - '#[/raw.githubusercontent.com/]tcp://208.67.220.220:5353'
@@ -58,6 +60,8 @@ dns:
   cache_ttl_min: 0
   cache_ttl_max: 0
   cache_optimistic: true
+  cache_optimistic_answer_ttl: 30s
+  cache_optimistic_max_age: 12h
   bogus_nxdomain: []
   aaaa_disabled: true
   enable_dnssec: true
@@ -176,6 +180,8 @@ user_rules:
   - '@@||mmstat.com^$client=''10.0.0.10'''
   - '@@||ac.dun.163yun.com^$important'
   - '@@||stats.jpush.cn^$important'
+  - '@@||ccc-x.jd.com^$important'
+  - '@@||static-s.iqiyi.com^$important'
   - ""
 dhcp:
   enabled: false
@@ -224,6 +230,7 @@ filtering:
   filters_update_interval: 24
   blocked_response_ttl: 10
   filtering_enabled: true
+  rewrites_enabled: true
   parental_enabled: false
   safebrowsing_enabled: false
   protection_enabled: true
@@ -248,4 +255,4 @@ os:
   group: ""
   user: ""
   rlimit_nofile: 0
-schema_version: 30
+schema_version: 32
